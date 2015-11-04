@@ -1,0 +1,77 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textViewStyle">@style/GLOBAL_TEXTVIEW</item>
+
+    </style>
+    <style name="AppTheme.Toolbar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+    <style name="TextAppearance.FontPath" parent="android:TextAppearance">
+        <!-- Custom Attr-->
+        <item name="fontPath">fonts/RobotoCondensed-Regular.ttf</item>
+    </style>
+    <style name="Toolbar" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="GLOBAL_TEXTVIEW" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/main_gray</item>
+    </style>
+    <style name="QUESTION_TEXTVIEW" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/main_text_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25dp</item>
+
+    </style>
+    <style name="DIALOG_TEXTVIEW" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/main_text_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18dp</item>
+
+    </style>
+    <style name="BUTTON_TEXTVIEW" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/main_text_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18dp</item>
+
+    </style>
+    <style name="OPTION_TEXTVIEW" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/main_text_color</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+    <style name="RADIO_TEXTVIEW" parent="android:Widget.CompoundButton.RadioButton">
+        <item name="android:textColor">@color/main_text_color</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:checked">false</item>
+    </style>
+
+    <style name="LIST_ITEM_TEXTVIEW" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/main_text_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="ToolbarCustomIconColor" parent="AppTheme">
+        <!-- android:textColorSecondary is used for coloring the navigation drawer icon and up arrow. -->
+        <item name="android:textColorSecondary">@color/main_white</item><!--FF0000  b90606 -->
+        <item name="android:textColorPrimary">@android:color/white</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

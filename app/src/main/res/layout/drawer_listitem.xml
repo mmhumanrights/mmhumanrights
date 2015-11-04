@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="5dp"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/iv_drawerlist_item"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+
+        android:layout_width="35dp"
+        android:layout_height="35dp" />
+    <TextView
+        android:id="@+id/tv_drawerlist_item"
+        android:textSize="15sp"
+        android:layout_width="fill_parent"
+        style="@style/LIST_ITEM_TEXTVIEW"
+        android:text="I am list Item"
+        android:layout_height="35dp"
+
+        android:layout_marginLeft="20dp"
+        android:layout_alignBottom="@+id/iv_drawerlist_item"
+        android:layout_toRightOf="@+id/iv_drawerlist_item"
+        android:layout_toEndOf="@+id/iv_drawerlist_item" />
+</RelativeLayout>
