@@ -20,7 +20,7 @@
             android:layout_height="170dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:background="@color/main_orange_light"
+            android:background="@color/main_blue_dark"
             android:baselineAligned="true"
             android:orientation="vertical"
             android:paddingTop="16dp">

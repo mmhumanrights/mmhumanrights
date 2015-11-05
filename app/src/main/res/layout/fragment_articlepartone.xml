@@ -3,11 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-
      >
     <GridView
         android:numColumns="3"
-
         android:columnWidth="100dp"
         android:stretchMode="columnWidth"
         android:layout_width="fill_parent"
