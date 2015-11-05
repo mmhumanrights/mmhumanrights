@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">MyanmarHumanRights</string>
     <string name="main_title">လူ့အခွင့် အရေးဆိုင်ရာသိမှတ်ဖွယ်ရာ</string>
+    <string name="title_activity_definition">အဓ္ဓိပ္ပယ် ဖွင့်ဆိုချက်</string>
 
     <string name="open_drawer">open</string>
     <string name="close_drawer">close</string>
@@ -350,6 +351,7 @@
 <string name="section_30">ဤကြေညာစာတမ်းပါ အခွင့်အရေးနှင့်တကွ လွတ်လပ်ခွင့်များ ပျက်စီးရာပျက်စီးကြောင်းတို့ကိုရည်ရွယ်၍၊ နိုင်ငံ တစ်နိုင်ငံ
 အတွက် ဖြစ်စေ၊ လူတစ်စု အတွက်ဖြစ်စေ၊ လူတစ်ဦးတစ်ယောက် အတွက် ဖြစ်စေ ပါဝင် ဆောင်ရွက်ရန် အခွင့်ရှိသည်ဟု
 သော်လည်းကောင်း၊ ကိုယ်တိုင်ဆောင်ရွက်ရန် အခွင့်ရှိသည်ဟုသော်လည်းကောင်း အဓိပ္ပါယ် ပိုင်းခြားကောက်ယူခြင်း မရှိစေရ။</string>
+    <string name="action_settings">Settings</string>
 
 
 </resources>

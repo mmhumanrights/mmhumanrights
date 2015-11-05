@@ -15,6 +15,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="ui.activities.DefinitionActivity"
+            android:label="@string/title_activity_definition"
+            android:theme="@style/AppTheme">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ui.activities.DrawerMainActivity" />
+        </activity>
     </application>
 
 </manifest>
