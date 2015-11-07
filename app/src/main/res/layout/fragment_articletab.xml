@@ -9,11 +9,11 @@
         android:layout_width="fill_parent"
         android:layout_height="50dip"
         android:layout_marginTop="0dp"
-        android:background="@color/main_white"
+        android:background="@color/colorPrimary"
         app:fontPath="fonts/Padauk.ttf"
-        app:pstsDividerColor="@color/main_pink"
+        app:pstsDividerColor="@color/main_white"
         app:pstsShouldExpand="true"
-        app:pstsIndicatorHeight="6sp"
+        app:pstsIndicatorHeight="2dp"
         app:pstsTextAllCaps="false"
 
 
