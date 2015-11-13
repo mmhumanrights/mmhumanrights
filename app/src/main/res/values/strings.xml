@@ -10,6 +10,8 @@
     <string name="mm_string_drawermenu_humanrights">လူ့အခွင့်အရေး များ</string>
     <string name="mm_string_about_us">ကျွနု်ပ် တို့အ ကြောင်း</string>
 
+    <string name="share_template">လူ့အခွင့်အရေးကြေငြာစာတမ်း</string>
+
     <string-array name="drawer_menu_array">
         <item>လူ့အခွင့်အရေးကြေငြာစာတမ်း</item>
         <item>ကျွနု်ပ်တို့အကြောင်း</item>
