@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyanmarHumanRights.iml" filepath="$PROJECT_DIR$/MyanmarHumanRights.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraryObserverableScrollView/libraryObserverableScrollView.iml" filepath="$PROJECT_DIR$/libraryObserverableScrollView/libraryObserverableScrollView.iml" />
     </modules>
   </component>
 </project>

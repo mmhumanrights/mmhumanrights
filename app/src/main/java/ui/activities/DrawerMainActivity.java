@@ -76,7 +76,8 @@ public class DrawerMainActivity extends AppCompatActivity {
 
         toolbar.setTitle(getResources().getString(R.string.app_name));
 
-        toolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
+
+        toolbar.setTitleTextColor(getResources().getColor(android.R.color.black));
         toolbar.setOnMenuItemClickListener(new ToolbarMenuclickListener());
 
 
