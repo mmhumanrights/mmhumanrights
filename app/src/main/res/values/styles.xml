@@ -70,7 +70,7 @@
     </style>
 
     <style name="Definition_title" parent="android:Widget.TextView">
-        <item name="android:textColor">@color/main_text_color</item>
+        <item name="android:textColor">@color/main_white</item>
         <item name="android:textSize">30dp</item>
         <item name="android:textStyle">bold</item>
     </style>
