@@ -62,7 +62,7 @@ public class DrawerMainActivity extends AppCompatActivity {
     void binddataTOList() {
         DrawerMenuList = getResources().getStringArray(R.array.drawer_menu_array);
         //DrawerIcons=new int[]{R.drawable.ic_calendar, R.drawable.ic_setting,R.drawable.ic_info};
-        DrawerIcons = new int[]{1, 2};
+        DrawerIcons = new int[]{R.drawable.ic_script, R.drawable.ic_people};
         DrawerList_Adapter drawerList_adapter = new DrawerList_Adapter(this, DrawerMenuList, DrawerIcons);
         drawerList_adapter.notifyDataSetChanged();
         mDrawerList.setAdapter(drawerList_adapter);

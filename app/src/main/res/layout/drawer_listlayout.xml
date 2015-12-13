@@ -41,18 +41,20 @@
                     android:layout_height="75dp"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true">
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginStart="18dp">
 
                     <TextView
                         android:id="@+id/profile_text"
                         android:layout_width="73dp"
                         android:layout_height="wrap_content"
                         android:layout_alignBottom="@+id/textView"
-
+                        android:background="@drawable/ic_logo"
                         android:layout_alignLeft="@+id/profile_imgView"
                         android:layout_alignStart="@+id/profile_imgView"
-                        android:layout_gravity="center|center|center"
-
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginLeft="@dimen/card_margin"
                         android:text=""
 
                         android:textSize="50sp" />
