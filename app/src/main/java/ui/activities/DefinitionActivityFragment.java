@@ -94,16 +94,16 @@ public class DefinitionActivityFragment extends Fragment implements ObservableSc
 
 
             Log.i("ARTICLE_PART", title_list.subList(0, 15).get(ARR_INDEX));
-            tv_def_article.setText(getResources().getString(R.string.definition_mm));
-            ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(title_list.subList(0, 15).get(ARR_INDEX));
+            tv_def_article.setText(title_list.subList(0, 15).get(ARR_INDEX));
+            ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(getResources().getString(R.string.definition_mm));
             tv_def_content.setText(content_list.subList(0, 15).get(ARR_INDEX));
         }
 
         if(ARTICLE_PART.equals("2")){
 
             Log.i("ARTICLE_PART", title_list.subList(15, 30).get(ARR_INDEX));
-            tv_def_article.setText(getResources().getString(R.string.definition_mm));
-            ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(title_list.subList(15, 30).get(ARR_INDEX));
+            tv_def_article.setText(title_list.subList(15, 30).get(ARR_INDEX));
+            ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(getResources().getString(R.string.definition_mm));
             tv_def_content.setText(content_list.subList(15, 30).get(ARR_INDEX));
         }
 
