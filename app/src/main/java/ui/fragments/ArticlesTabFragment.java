@@ -1,5 +1,6 @@
 package ui.fragments;
 
+import android.content.res.Configuration;
 import android.graphics.Point;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -30,6 +31,8 @@ public class ArticlesTabFragment extends BaseFragment {
         View v = inflater.inflate(R.layout.fragment_articletab, container, false);
         PagerSlidingTabStrip tabs = (PagerSlidingTabStrip) v.findViewById(R.id.tabs);
 
+        Configuration config=getActivity().getResources().getConfiguration();
+
         mViewPager = (ViewPager) v.findViewById(R.id.pager);
         ArticleTabPagerAdapter tabPagerAdapter=new ArticleTabPagerAdapter(getChildFragmentManager());
 
@@ -37,7 +40,12 @@ public class ArticlesTabFragment extends BaseFragment {
         tabs.setTextColor(getResources().getColor(R.color.main_text_color));
         tabs.setIndicatorColor(getResources().getColor(R.color.main_text_color));
         tabs.setTypeface(custom_font, 1);
-        tabs.setTextSize(com_utils.getScreenWidth(getActivity())/18);
+        if(config.orientation==Configuration.ORIENTATION_LANDSCAPE) {
+            tabs.setTextSize(com_utils.getScreenWidth(getActivity()) / 30);
+
+        }else{
+            tabs.setTextSize(com_utils.getScreenWidth(getActivity()) / 18);
+        }
 
         Log.w("SCR_WIDTH", String.valueOf(com_utils.getScreenWidth(getActivity())/30));
 

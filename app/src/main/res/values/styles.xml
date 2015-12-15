@@ -18,6 +18,7 @@
         <item name="drawerArrowStyle">@style/MyDrawerArrowToggle</item>
 
     </style>
+
     <style name="MyDrawerArrowToggle" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="spinBars">true</item>
         <item name="color">@color/main_text_color</item>
@@ -35,6 +36,7 @@
         <item name="drawerArrowStyle">@style/MyDrawerArrowToggle</item>
 
     </style>
+
     <style name="ToolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textSize">20sp</item>
     </style>
@@ -74,6 +76,7 @@
         <item name="android:textSize">30dp</item>
         <item name="android:textStyle">bold</item>
     </style>
+
     <style name="Definition_content" parent="android:Widget.TextView">
         <item name="android:textColor">@color/main_text_color</item>
         <item name="android:textSize">25dp</item>

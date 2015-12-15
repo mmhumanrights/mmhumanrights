@@ -1,6 +1,7 @@
 package ui.activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 
 import android.support.v4.app.FragmentManager;
@@ -62,7 +63,7 @@ public class DrawerMainActivity extends AppCompatActivity {
     void binddataTOList() {
         DrawerMenuList = getResources().getStringArray(R.array.drawer_menu_array);
         //DrawerIcons=new int[]{R.drawable.ic_calendar, R.drawable.ic_setting,R.drawable.ic_info};
-        DrawerIcons = new int[]{R.drawable.ic_script, R.drawable.ic_people};
+        DrawerIcons = new int[]{R.drawable.ic_script, R.drawable.ic_people,R.drawable.ic_people};
         DrawerList_Adapter drawerList_adapter = new DrawerList_Adapter(this, DrawerMenuList, DrawerIcons);
         drawerList_adapter.notifyDataSetChanged();
         mDrawerList.setAdapter(drawerList_adapter);
@@ -159,6 +160,8 @@ public class DrawerMainActivity extends AppCompatActivity {
             case 2:
                 //Do action here
                 toolbar.setTitle(DrawerMenuList[position]);
+                Intent i=new Intent(this,SubmissionActivity.class);
+                startActivity(i);
 
                 //fragmentManager.beginTransaction().replace(R.id.content_frame, new Fragment_vocablist()).commit();
                 break;
