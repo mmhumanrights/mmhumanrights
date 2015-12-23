@@ -23,7 +23,7 @@
             android:minHeight="?attr/actionBarSize"
 
             app:popupTheme="@style/AppTheme"
-            app:theme="@style/ToolbarCustomIconColor"/>
+            app:theme="@style/MyToolbar"/>
 
     </android.support.design.widget.AppBarLayout>
 

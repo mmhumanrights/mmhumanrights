@@ -98,6 +98,7 @@ public class DrawerMainActivity extends AppCompatActivity {
                 // toolbar.setTitle(Title);
             }
         };
+
         mDrawerLayout.setDrawerListener(mDrawerToggle);
 
         mDrawerLayout.openDrawer(GravityCompat.START);
