@@ -41,18 +41,6 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:text="article"
-
-                        style="@style/Definition_title"
-                        fontPath="fonts/Padauk_bold.ttf"
-                        android:id="@+id/tv_def_article"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                        android:layout_marginTop="@dimen/activity_horizontal_margin"
-                        android:layout_gravity="left|center_vertical" />
-
                     <android.support.v7.widget.Toolbar
                         xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/toolbar"
@@ -67,6 +55,28 @@
                         app:popupTheme="@style/AppTheme"
                         app:theme="@style/ToolbarCustomIconColor"
                         android:layout_gravity="center_horizontal|top" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="@string/share_template"
+
+                        style="@style/Definition_title"
+                        fontPath="fonts/Padauk_bold.ttf"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="article"
+
+                        style="@style/Definition_title"
+                        fontPath="fonts/Padauk_bold.ttf"
+                        android:id="@+id/tv_def_article"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_gravity="center_horizontal|bottom" />
                 </FrameLayout>
 
                 <FrameLayout

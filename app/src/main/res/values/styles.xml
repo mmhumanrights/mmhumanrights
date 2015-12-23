@@ -60,7 +60,7 @@
     </style>
 
     <style name="GLOBAL_TEXTVIEW" parent="android:Widget.TextView">
-        <item name="android:textColor">@color/main_gray</item>
+        <item name="android:textColor">@color/main_text_color</item>
     </style>
 
     <style name="QUESTION_TEXTVIEW" parent="android:Widget.TextView">
