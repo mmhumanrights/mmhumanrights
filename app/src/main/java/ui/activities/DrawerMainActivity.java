@@ -67,7 +67,7 @@ public class DrawerMainActivity extends AppCompatActivity {
     void binddataTOList() {
         DrawerMenuList = getResources().getStringArray(R.array.drawer_menu_array);
         //DrawerIcons=new int[]{R.drawable.ic_calendar, R.drawable.ic_setting,R.drawable.ic_info};
-        DrawerIcons = new int[]{R.drawable.ic_script,R.drawable.ic_send,R.drawable.ic_people};
+        DrawerIcons = new int[]{R.drawable.ic_script,R.drawable.ic_send,R.drawable.ic_settings,R.drawable.ic_people};
         DrawerList_Adapter drawerList_adapter = new DrawerList_Adapter(this, DrawerMenuList, DrawerIcons);
         drawerList_adapter.notifyDataSetChanged();
         mDrawerList.setAdapter(drawerList_adapter);
@@ -168,7 +168,12 @@ public class DrawerMainActivity extends AppCompatActivity {
                             startActivity(new Intent(Settings.ACTION_NETWORK_OPERATOR_SETTINGS));
                         }
                     });
-                    builder.setNegativeButton("မဖွင့်ပါ",null);
+                    builder.setNegativeButton("မဖွင့်ပါ", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            makeFragmentSelection(0);
+                        }
+                    });
                     builder.show();
 
                 }else {

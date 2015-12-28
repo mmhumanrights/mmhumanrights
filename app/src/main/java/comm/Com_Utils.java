@@ -22,15 +22,13 @@ public class Com_Utils {
     }
 
     public static boolean isOnline(Context c) {
-        NetworkInfo netInfo = null;
-        try {
-            ConnectivityManager cm =
-                    (ConnectivityManager) c.getSystemService(Context.CONNECTIVITY_SERVICE);
-            netInfo = cm.getActiveNetworkInfo();
-        } catch (SecurityException e) {
-            e.printStackTrace();
-        }
-        return netInfo != null && netInfo.isConnectedOrConnecting();
+        ConnectivityManager cm = (ConnectivityManager) c.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo ni = cm.getActiveNetworkInfo();
+        if (ni == null) {
+            // There are no active networks.
+            return false;
+        } else
+            return true;
     }
 
     public int getScreenWidth(Activity a){

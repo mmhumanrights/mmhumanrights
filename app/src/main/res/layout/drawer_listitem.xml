@@ -3,13 +3,14 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_marginLeft="20dp"
     android:layout_marginRight="20dp"
-    android:layout_marginBottom="5dp"
-    android:layout_height="match_parent">
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/iv_drawerlist_item"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:layout_width="35dp"
         android:layout_height="35dp" />
     <TextView
@@ -18,10 +19,13 @@
         android:layout_width="fill_parent"
         style="@style/LIST_ITEM_TEXTVIEW"
         android:text="I am list Item"
-        android:layout_height="35dp"
+        android:layout_height="wrap_content"
 
         android:layout_marginLeft="20dp"
+
         android:layout_alignBottom="@+id/iv_drawerlist_item"
         android:layout_toRightOf="@+id/iv_drawerlist_item"
-        android:layout_toEndOf="@+id/iv_drawerlist_item" />
+        android:layout_toEndOf="@+id/iv_drawerlist_item"
+        android:layout_marginStart="9dp"
+        android:layout_marginBottom="7dp" />
 </RelativeLayout>
