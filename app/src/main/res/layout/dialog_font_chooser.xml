@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:layout_width="wrap_content"
+            android:id="@+id/rdo_unicode"
+            android:text="သင်မြင်ရသည်ကိုရွေးချယ်ပေးပါ"
+
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.AppCompatRadioButton
+            android:layout_width="wrap_content"
+            android:id="@+id/rdo_zawgyi"
+            android:text="သင္ျမင္ရသည္ကိုေရြးခ်ယ္ေပးပါ"
+            android:layout_height="wrap_content" />
+
+
+
+
+</LinearLayout>
