@@ -37,8 +37,9 @@ public class ArticlesTabFragment extends BaseFragment {
         ArticleTabPagerAdapter tabPagerAdapter=new ArticleTabPagerAdapter(getChildFragmentManager());
 
         Typeface custom_font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Padauk.ttf");
-        tabs.setTextColor(getResources().getColor(R.color.main_text_color));
-        tabs.setIndicatorColor(getResources().getColor(R.color.main_text_color));
+        tabs.setTextColor(getResources().getColor(R.color.main_white));
+
+        tabs.setIndicatorColor(getResources().getColor(R.color.main_white));
         tabs.setTypeface(custom_font, 1);
         if(config.orientation==Configuration.ORIENTATION_LANDSCAPE) {
             tabs.setTextSize(com_utils.getScreenWidth(getActivity()) / 30);

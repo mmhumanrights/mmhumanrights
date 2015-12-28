@@ -11,7 +11,7 @@
         android:layout_marginTop="0dp"
         android:background="@color/colorPrimary"
         app:fontPath="fonts/Padauk.ttf"
-        app:pstsDividerColor="@color/main_text_color"
+        app:pstsDividerColor="@color/main_white"
         app:pstsShouldExpand="true"
         app:pstsIndicatorHeight="4dp"
         app:pstsTextAllCaps="false"

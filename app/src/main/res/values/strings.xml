@@ -3,6 +3,8 @@
     <string name="main_title">လူ့အခွင့် အရေးဆိုင်ရာသိမှတ်ဖွယ်ရာ</string>
     <string name="title_activity_definition">အဓ္ဓိပ္ပယ် ဖွင့်ဆိုချက်</string>
 
+    <string name="internet_required">တိုင်ကြားလွှာပို့ရန်အင်တာနက်လိုအပ်ပါသည် \nသင့်ဖုန်းအင်တာနက်ကိုဖွင့်မလား</string>
+
     <string name="open_drawer">open</string>
     <string name="close_drawer">close</string>
     <string name="definition_mm">အဓိပ္ပာယ်ဖွင့် ဆိုချက်</string>
@@ -15,8 +17,9 @@
 
     <string-array name="drawer_menu_array">
         <item>လူ့အခွင့်အရေးကြေငြာစာတမ်း</item>
-        <item>ကျွန်ုပ် တို့အကြောင်း</item>
+
         <item>တိုင်ကြားလွှာပို့ရန်</item>
+        <item>ကျွန်ုပ် တို့အကြောင်း</item>
 
     </string-array>
     <string-array name="material_colors_array">

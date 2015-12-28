@@ -32,7 +32,7 @@
 
     <style name="MyDrawerArrowToggle" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="spinBars">true</item>
-        <item name="color">@color/main_text_color</item>
+        <item name="color">@color/main_white</item>
 
     </style>
 
@@ -104,7 +104,7 @@
 
     <style name="LIST_ITEM_TEXTVIEW" parent="android:Widget.TextView">
         <item name="android:textColor">@color/main_text_color</item>
-        <item name="android:textStyle">bold</item>
+
         <item name="android:textSize">18dp</item>
     </style>
 

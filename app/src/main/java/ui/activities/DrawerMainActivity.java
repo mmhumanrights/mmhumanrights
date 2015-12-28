@@ -1,13 +1,16 @@
 package ui.activities;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 
+import android.provider.Settings;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -22,6 +25,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import comm.Com_Utils;
 import ui.Adapters.DrawerList_Adapter;
 import ui.fragments.ArticlesTabFragment;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
@@ -63,7 +67,7 @@ public class DrawerMainActivity extends AppCompatActivity {
     void binddataTOList() {
         DrawerMenuList = getResources().getStringArray(R.array.drawer_menu_array);
         //DrawerIcons=new int[]{R.drawable.ic_calendar, R.drawable.ic_setting,R.drawable.ic_info};
-        DrawerIcons = new int[]{R.drawable.ic_script, R.drawable.ic_people,R.drawable.ic_people};
+        DrawerIcons = new int[]{R.drawable.ic_script,R.drawable.ic_send,R.drawable.ic_people};
         DrawerList_Adapter drawerList_adapter = new DrawerList_Adapter(this, DrawerMenuList, DrawerIcons);
         drawerList_adapter.notifyDataSetChanged();
         mDrawerList.setAdapter(drawerList_adapter);
@@ -78,7 +82,7 @@ public class DrawerMainActivity extends AppCompatActivity {
         toolbar.setTitle(getResources().getString(R.string.app_name));
 
 
-        toolbar.setTitleTextColor(getResources().getColor(android.R.color.black));
+        toolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
         toolbar.setOnMenuItemClickListener(new ToolbarMenuclickListener());
 
 
@@ -155,14 +159,28 @@ public class DrawerMainActivity extends AppCompatActivity {
                 break;
             case 1:
                 toolbar.setTitle(DrawerMenuList[position]);
+                if(!Com_Utils.isOnline(this)){
+                    AlertDialog.Builder builder=new AlertDialog.Builder(this);
+                    builder.setMessage(this.getResources().getString(R.string.internet_required));
+                    builder.setPositiveButton("ဖွင့်မည်", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            startActivity(new Intent(Settings.ACTION_NETWORK_OPERATOR_SETTINGS));
+                        }
+                    });
+                    builder.setNegativeButton("မဖွင့်ပါ",null);
+                    builder.show();
 
+                }else {
+                    Intent i = new Intent(this, SubmissionActivity.class);
+                    startActivity(i);
+                }
                 // fragmentManager.beginTransaction().replace(R.id.content_frame, new SDSListActivityFragment()).commit();
                 break;
             case 2:
                 //Do action here
                 toolbar.setTitle(DrawerMenuList[position]);
-                Intent i=new Intent(this,SubmissionActivity.class);
-                startActivity(i);
+
 
                 //fragmentManager.beginTransaction().replace(R.id.content_frame, new Fragment_vocablist()).commit();
                 break;
