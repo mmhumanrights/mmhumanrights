@@ -72,7 +72,7 @@ public class ArticleGridAdapter extends BaseAdapter {
 
 
 
-        String ran_color=arr_material_array[com_utils.getRandomnum(arr_material_array.length,0)];
+        String ran_color=arr_material_array[Com_Utils.getRandomnum(arr_material_array.length,0)];
         /*int ran_color_hex = Integer.parseInt(ran_color.replaceFirst("#",""), 16);
         Log.w("COLOR_CODES", String.valueOf(ran_color_hex));*/
         vh.grid_item_root_layout.setBackgroundColor(Color.parseColor(ran_color));

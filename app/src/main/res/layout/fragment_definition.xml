@@ -33,7 +33,7 @@
 
 
                     android:layout_width="fill_parent"
-                    android:src="@drawable/bg_hands"
+
                     android:scaleType="centerCrop"
                     android:layout_height="@dimen/app_bar_height"
                     android:id="@+id/header_imageView"

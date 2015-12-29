@@ -19,8 +19,8 @@
         <item>လူ့အခွင့်အရေးကြေငြာစာတမ်း</item>
 
         <item>တိုင်ကြားလွှာပို့ရန်</item>
-        <item>Settings</item>
-        <item>ကျွန်ုပ် တို့အကြောင်း</item>
+
+        <item>About </item>
 
     </string-array>
     <string-array name="material_colors_array">
@@ -360,7 +360,7 @@
 <string name="section_30">ဤကြေညာစာတမ်းပါ အခွင့်အရေးနှင့်တကွ လွတ်လပ်ခွင့်များ ပျက်စီးရာပျက်စီးကြောင်းတို့ကိုရည်ရွယ်၍၊ နိုင်ငံ တစ်နိုင်ငံ
 အတွက် ဖြစ်စေ၊ လူတစ်စု အတွက်ဖြစ်စေ၊ လူတစ်ဦးတစ်ယောက် အတွက် ဖြစ်စေ ပါဝင် ဆောင်ရွက်ရန် အခွင့်ရှိသည်ဟု
 သော်လည်းကောင်း၊ ကိုယ်တိုင်ဆောင်ရွက်ရန် အခွင့်ရှိသည်ဟုသော်လည်းကောင်း အဓိပ္ပါယ် ပိုင်းခြားကောက်ယူခြင်း မရှိစေရ။</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Font Settings</string>
     <string name="title_activity_submission">Submit Your Problem</string>
 
 

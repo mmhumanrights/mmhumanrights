@@ -13,12 +13,14 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.AppCompatRadioButton;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 
 import android.widget.ListAdapter;
@@ -26,7 +28,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import comm.Com_Utils;
+import comm.MySharedPreference;
+import config.GLOBAL_STRING;
 import ui.Adapters.DrawerList_Adapter;
+import ui.fragments.AboutFragment;
 import ui.fragments.ArticlesTabFragment;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
@@ -46,6 +51,11 @@ public class DrawerMainActivity extends AppCompatActivity {
 
     String[] DrawerMenuList;
     int[] DrawerIcons;
+
+
+    AlertDialog dialog_fontchooser;
+    AppCompatRadioButton rdo_unicode, rdo_zawgyi;
+    MySharedPreference mSharedPreference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,7 +77,7 @@ public class DrawerMainActivity extends AppCompatActivity {
     void binddataTOList() {
         DrawerMenuList = getResources().getStringArray(R.array.drawer_menu_array);
         //DrawerIcons=new int[]{R.drawable.ic_calendar, R.drawable.ic_setting,R.drawable.ic_info};
-        DrawerIcons = new int[]{R.drawable.ic_script,R.drawable.ic_send,R.drawable.ic_settings,R.drawable.ic_people};
+        DrawerIcons = new int[]{R.drawable.ic_script,R.drawable.ic_send,R.drawable.ic_people};
         DrawerList_Adapter drawerList_adapter = new DrawerList_Adapter(this, DrawerMenuList, DrawerIcons);
         drawerList_adapter.notifyDataSetChanged();
         mDrawerList.setAdapter(drawerList_adapter);
@@ -184,15 +194,16 @@ public class DrawerMainActivity extends AppCompatActivity {
                 break;
             case 2:
                 //Do action here
-                toolbar.setTitle(DrawerMenuList[position]);
+                //toolbar.setTitle(DrawerMenuList[position]);
 
+                toolbar.setTitle(DrawerMenuList[position]);
+                fragmentManager.beginTransaction().replace(R.id.content_frame,new AboutFragment()).commit();
 
                 //fragmentManager.beginTransaction().replace(R.id.content_frame, new Fragment_vocablist()).commit();
                 break;
             case 3:
                 //Do action here
-                toolbar.setTitle(DrawerMenuList[position]);
-                //fragmentManager.beginTransaction().replace(R.id.content_frame,new Fragment_Settings()).commit();
+
                 break;
             case 4:
                 //Do action here
@@ -230,5 +241,7 @@ public class DrawerMainActivity extends AppCompatActivity {
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
+
+
 
 }

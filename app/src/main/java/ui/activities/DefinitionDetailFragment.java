@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollView;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
 import com.github.ksoichiro.android.observablescrollview.ScrollState;
@@ -25,12 +26,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import comm.Com_Utils;
 import config.GLOBAL_STRING;
 
 /**
  * A placeholder fragment containing a simple view.
  */
-public class DefinitionActivityFragment extends Fragment implements ObservableScrollViewCallbacks {
+public class DefinitionDetailFragment extends Fragment implements ObservableScrollViewCallbacks {
     private CollapsingToolbarLayout mCollapsingToolbarLayout;
     private Toolbar mToolbar;
     private int ARR_INDEX=0;
@@ -41,14 +43,15 @@ public class DefinitionActivityFragment extends Fragment implements ObservableSc
 
     private int mParallaxImageHeight;
     String[] mArr_title,mArr_definition;
+    int[] arr_img;
 
     TextView tv_def_content,tv_def_article;
 
-    public DefinitionActivityFragment() {
+    public DefinitionDetailFragment() {
     }
 
-    public static DefinitionActivityFragment newInstance(int array_index,String article_part){
-        DefinitionActivityFragment fragment=new DefinitionActivityFragment();
+    public static DefinitionDetailFragment newInstance(int array_index, String article_part){
+        DefinitionDetailFragment fragment=new DefinitionDetailFragment();
         Bundle args = new Bundle();
         args.putInt(GLOBAL_STRING.ARRAY_INDEX, array_index);
         args.putString(GLOBAL_STRING.ARTICLE_PART, article_part);
@@ -76,12 +79,20 @@ public class DefinitionActivityFragment extends Fragment implements ObservableSc
         mToolbar.setBackgroundColor(ScrollUtils.getColorWithAlpha(1, getResources().getColor(R.color.colorPrimary)));
         parallex_scrollview=(ObservableScrollView) v.findViewById(R.id.parallex_scrollview);
         share_fab =(FloatingActionButton) v.findViewById(R.id.share_fab);
+        tv_def_article=(TextView)v.findViewById(R.id.tv_def_article);
+        tv_def_content=(TextView)v.findViewById(R.id.tv_def_content);
+        arr_img=new int[]{R.drawable.bg_hands,R.drawable.bg_header,R.drawable.bg_keizer};
+
+
 
         mParallaxImageHeight = getResources().getDimensionPixelSize(R.dimen.detail_header_image_Height);
 
         headerimage_view=(ImageView) v.findViewById(R.id.header_imageView);
-        tv_def_article=(TextView)v.findViewById(R.id.tv_def_article);
-        tv_def_content=(TextView)v.findViewById(R.id.tv_def_content);
+
+        if(savedInstanceState==null) {
+            Glide.with(getActivity()).load(arr_img[Com_Utils.getRandomnum(arr_img.length, 0)]).centerCrop().into(headerimage_view);
+        }
+
         if (mToolbar != null) {
             ((AppCompatActivity)getActivity()).setSupportActionBar(mToolbar);
             ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -90,21 +101,11 @@ public class DefinitionActivityFragment extends Fragment implements ObservableSc
         List<String> title_list = new ArrayList(Arrays.asList(getActivity().getResources().getStringArray(R.array.arr_article_title)));
         List<String> content_list = new ArrayList(Arrays.asList(getActivity().getResources().getStringArray(R.array.arr_article_def)));
         Log.i("ARTICLE_PART", String.valueOf(ARTICLE_PART));
-        if(ARTICLE_PART.equals("1")) {
 
 
-            Log.i("ARTICLE_PART", title_list.subList(0, 15).get(ARR_INDEX));
-            tv_def_article.setText(title_list.subList(0, 15).get(ARR_INDEX));
-            //((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(getResources().getString(R.string.definition_mm));
-            tv_def_content.setText(content_list.subList(0, 15).get(ARR_INDEX));
-        }
-
-        if(ARTICLE_PART.equals("2")){
-
-            Log.i("ARTICLE_PART", title_list.subList(15, 30).get(ARR_INDEX));
-            tv_def_article.setText(title_list.subList(15, 30).get(ARR_INDEX));
-
-            tv_def_content.setText(content_list.subList(15, 30).get(ARR_INDEX));
+        if(ARTICLE_PART.equals("")){
+            tv_def_article.setText(title_list.get(ARR_INDEX));
+            tv_def_content.setText(content_list.get(ARR_INDEX));
         }
 
        //mCollapsingToolbarLayout.setTitle("Yangon");

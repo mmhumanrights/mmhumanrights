@@ -9,6 +9,9 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatRadioButton;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.webkit.WebView;
 import android.widget.CompoundButton;
 
@@ -33,6 +36,7 @@ public class SubmissionActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_submission);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
         toolbar.setTitleTextColor(getResources().getColor(android.R.color.white));
 
         mSharedPreference = new MySharedPreference(this);
@@ -47,15 +51,34 @@ public class SubmissionActivity extends AppCompatActivity {
 
 
         setSupportActionBar(toolbar);
+        toolbar.inflateMenu(R.menu.menu_submission);
 
         final Drawable upArrow = getResources().getDrawable(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
         upArrow.setColorFilter(getResources().getColor(android.R.color.white), PorterDuff.Mode.SRC_ATOP);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
 
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         loadForm();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_submission, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.action_settings:
+                    loadDialogChooser(this);
+                    dialog_fontchooser.show();
+                    break;
+        }
+        return true;
+    }
 
     void loadForm() {
         if (mSharedPreference.getString(GLOBAL_STRING.FONT_SETTINGS, "").equals(GLOBAL_STRING.UNICODE)) {
@@ -88,7 +111,18 @@ public class SubmissionActivity extends AppCompatActivity {
                 rdo_unicode = (AppCompatRadioButton) dialog_fontchooser.findViewById(R.id.rdo_unicode);
                 rdo_zawgyi = (AppCompatRadioButton) dialog_fontchooser.findViewById(R.id.rdo_zawgyi);
 
-                rdo_unicode.setChecked(true);
+
+                if (!mSharedPreference.getString(GLOBAL_STRING.FONT_SETTINGS, "").equals("")) {
+                    if(mSharedPreference.getString(GLOBAL_STRING.FONT_SETTINGS, "").equals(GLOBAL_STRING.UNICODE)){
+                        rdo_unicode.setChecked(true);
+                    }
+                    if(mSharedPreference.getString(GLOBAL_STRING.FONT_SETTINGS, "").equals(GLOBAL_STRING.ZAWGYI)){
+                        rdo_zawgyi.setChecked(true);
+                    }
+
+
+
+                }
 
 
                 rdo_unicode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

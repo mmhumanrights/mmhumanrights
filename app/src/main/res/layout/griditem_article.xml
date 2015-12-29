@@ -52,7 +52,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/to_continue_reading"
             android:id="@+id/textView2"
-            android:textColor="@color/main_blue"
+            android:textColor="@color/main_blue_dark"
             fontPath="fonts/Padauk_Bold.ttf"
             android:layout_gravity="right|top"
             android:layout_alignTop="@+id/tv_article"

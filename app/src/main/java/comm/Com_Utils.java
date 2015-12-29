@@ -2,6 +2,8 @@ package comm;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Point;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -14,10 +16,10 @@ import java.util.Random;
  */
 public class Com_Utils {
 
-    public  int getRandomnum(int max,int min){
+    public static int getRandomnum(int max, int min) {
         Random rand = new Random();
 
-        int  n = rand.nextInt(max) + min;
+        int n = rand.nextInt(max) + min;
         return n;
     }
 
@@ -31,7 +33,23 @@ public class Com_Utils {
             return true;
     }
 
-    public int getScreenWidth(Activity a){
+    /**
+     * @return Application's version code from the {@code PackageManager}.
+     */
+    public static String getAppVersion(Context context) {
+        try {
+
+
+            PackageInfo packageInfo = context.getPackageManager()
+                    .getPackageInfo(context.getPackageName(), 0);
+            return packageInfo.versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            // should never happen
+            throw new RuntimeException("Could not get package name: " + e);
+        }
+    }
+
+    public int getScreenWidth(Activity a) {
         Display display = a.getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
@@ -39,7 +57,7 @@ public class Com_Utils {
         return width;
     }
 
-    public int getScreenHeight(Activity a){
+    public int getScreenHeight(Activity a) {
         Display display = a.getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);

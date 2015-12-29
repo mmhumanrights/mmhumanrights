@@ -9,6 +9,6 @@
     <dimen name="app_bar_height">200dp</dimen>
     <dimen name="nav_header_height">192dp</dimen>
     <dimen name="definition_article_margin">16dp</dimen>
-    <dimen name="detail_header_image_Height">400dp</dimen>
+    <dimen name="detail_header_image_Height">100dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 </resources>
