@@ -12,8 +12,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.webkit.WebView;
 import android.widget.CompoundButton;
+import android.widget.Toast;
 
 import com.myanmarhumanrights.R;
 
@@ -57,6 +59,13 @@ public class SubmissionActivity extends AppCompatActivity {
         upArrow.setColorFilter(getResources().getColor(android.R.color.white), PorterDuff.Mode.SRC_ATOP);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
 
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SubmissionActivity.this.finish();
+            }
+        });
+
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         loadForm();
@@ -78,6 +87,11 @@ public class SubmissionActivity extends AppCompatActivity {
                     break;
         }
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
     }
 
     void loadForm() {

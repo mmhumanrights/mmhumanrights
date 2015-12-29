@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_yellow"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/description_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/main_yellow"
+        android:layout_alignParentBottom="true"
+        >
+
+
+        <!--<TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:textSize="14sp"
+            android:text=""
+            android:textColor="@color/main_color"
+            android:layout_alignParentTop="true"
+            app:fontPath="fonts/Roboto-Regular.ttf"
+            android:layout_centerVertical="true"/>-->
+
+
+        <TextView
+            android:id="@+id/help_tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:textColor="@color/main_text_color"
+            app:fontPath="fonts/Roboto-Medium.ttf"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/help_tv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="18sp"
+            android:paddingTop="15dp"
+            android:padding="16dp"
+            android:textColor="@color/main_text_color"
+            app:fontPath="fonts/Roboto-Medium.ttf"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/help_fragment_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:background="@color/main_blue"
+
+        android:layout_above="@id/description_layout"
+        android:paddingTop="16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                style="@style/Definition_content"
+                android:text="asdf"
+
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+
+</RelativeLayout>
