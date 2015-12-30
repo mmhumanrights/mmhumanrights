@@ -67,7 +67,7 @@
         android:paddingTop="16dp">
             <TextView
                 android:layout_width="wrap_content"
-                style="@style/Definition_content"
+                style="@style/SplashText_content"
                 android:text="asdf"
                 android:id="@+id/splash_textview"
 

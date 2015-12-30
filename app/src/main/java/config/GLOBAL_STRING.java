@@ -10,6 +10,8 @@ public class GLOBAL_STRING {
 
     public static final String FONT_SETTINGS="FONT";
 
+    public static final String SPLASH="SPLASH";
+
     public static final String ZAWGYI="zawgyi";
     public static final String UNICODE="unicode";
 

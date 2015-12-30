@@ -51,11 +51,14 @@ public class SplashFragment extends BaseFragment {
             case 1:
                 tv_left.setText("BACK");
                 tv_right.setText("NEXT");
+                tv_right.setTextColor(getActivity().getResources().getColor(R.color.main_white));
+                tv_left.setTextColor(getActivity().getResources().getColor(R.color.main_white));
                 //description.setText("Once your request has been approved, you have a match, showing your vedic score.");
                 splash_textview.setText("ကျွန်တော်တို့တွေ\n" +
                         "မှာလူ့အခွင့်အရေး\n" +
                         "ရှိလား");
                 splash_textview.setTextColor(getActivity().getResources().getColor(R.color.main_white));
+
                 help_fragment_imageview.setBackgroundColor(getActivity().getResources().getColor(R.color.main_blue_dark));
                 description_layout.setBackgroundColor(getActivity().getResources().getColor(R.color.main_blue_dark));
 
@@ -63,7 +66,9 @@ public class SplashFragment extends BaseFragment {
                 break;
             case 2:
                 tv_left.setText("BACK");
-                tv_right.setText("DONE");
+                tv_right.setText("NEXT");
+                tv_right.setTextColor(getActivity().getResources().getColor(R.color.main_white));
+                tv_left.setTextColor(getActivity().getResources().getColor(R.color.main_white));
                 //description.setText("You can then start chatting. The rest is up to you… Be nice :)");
                 splash_textview.setText("ကျွန်တော်တို့ရော\n" +
                         "လူ့အခွင့်အရေးတွေ\n" +
@@ -71,6 +76,37 @@ public class SplashFragment extends BaseFragment {
                 splash_textview.setTextColor(getActivity().getResources().getColor(R.color.main_white));
                 help_fragment_imageview.setBackgroundColor(getActivity().getResources().getColor(R.color.main_red));
                 description_layout.setBackgroundColor(getActivity().getResources().getColor(R.color.main_red));
+
+                break;
+
+            case 3:
+                tv_left.setText("BACK");
+                tv_right.setText("NEXT");
+                tv_right.setTextColor(getActivity().getResources().getColor(R.color.main_white));
+                tv_left.setTextColor(getActivity().getResources().getColor(R.color.main_white));
+                //description.setText("You can then start chatting. The rest is up to you… Be nice :)");
+                splash_textview.setText("အပြည်ပြည်ဆိုင်ရာ\n" +
+                        "လူ့အခွင့်အရေး\n" +
+                        "ကြေငြာစာတမ်းပါ \n" +
+                        "အချက်အလက်တွေက\n" +
+                        "ဘာတွေလဲ");
+                splash_textview.setTextColor(getActivity().getResources().getColor(R.color.main_white));
+                help_fragment_imageview.setBackgroundColor(getActivity().getResources().getColor(R.color.main_teal));
+                description_layout.setBackgroundColor(getActivity().getResources().getColor(R.color.main_teal));
+
+                break;
+            case 4:
+                tv_left.setText("BACK");
+                tv_right.setText("DONE");
+                tv_right.setTextColor(getActivity().getResources().getColor(R.color.main_white));
+                tv_left.setTextColor(getActivity().getResources().getColor(R.color.main_white));
+                //description.setText("You can then start chatting. The rest is up to you… Be nice :)");
+                splash_textview.setText("Myanmar Human Rights App \n" +
+                        "မှသင့်ကိုလူ့အခွင့်အရေးနှင့်\n" +
+                        "ပတ်သက်၍ အသိပညာမျှဝေပါရစေ");
+                splash_textview.setTextColor(getActivity().getResources().getColor(R.color.main_white));
+                help_fragment_imageview.setBackgroundColor(getActivity().getResources().getColor(R.color.main_blue));
+                description_layout.setBackgroundColor(getActivity().getResources().getColor(R.color.main_blue));
 
                 break;
             default:

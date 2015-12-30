@@ -28,7 +28,7 @@
         app:radius="9dp"
 
         app:strokeColor="@color/main_white"
-        app:fillColor="@color/main_blue_dark"
-        app:pageColor="@color/main_yellow"/>
+        app:fillColor="@color/main_white"
+        app:pageColor="#00000000"/>
 
 </RelativeLayout>

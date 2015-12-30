@@ -102,6 +102,12 @@
 
     </style>
 
+    <style name="SplashText_content" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/main_text_color</item>
+        <item name="android:textSize">30dp</item>
+
+    </style>
+
     <style name="RADIO_TEXTVIEW" parent="android:Widget.CompoundButton.RadioButton">
         <item name="android:textColor">@color/main_text_color</item>
         <item name="android:textSize">15dp</item>

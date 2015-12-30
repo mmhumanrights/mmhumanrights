@@ -15,6 +15,7 @@
     <color name="main_white">#FFF</color>
     <color name="main_dark_orange">#c7760b</color>
     <color name="main_yellow">#f9dc06</color>
+    <color name="main_light_yellow">#fff8c2</color>
     <color name="main_orange_light">#ffffa01c</color>
     <color name="main_dark_teal">#003d5e</color>
     <color name="main_gray">#9c9c9c</color>

@@ -22,7 +22,7 @@ public class AboutFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.fragment_about,container,false);
         tv_version_name=(TextView) v.findViewById(R.id.tv_version_name);
-        tv_version_name.setText("V "+Com_Utils.getAppVersion(getActivity()));
+        tv_version_name.setText("Version "+Com_Utils.getAppVersion(getActivity()));
         return v;
     }
 }

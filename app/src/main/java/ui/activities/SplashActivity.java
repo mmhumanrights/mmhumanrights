@@ -2,6 +2,7 @@ package ui.activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v4.view.ViewPager;
@@ -15,6 +16,8 @@ import com.viewpagerindicator.CirclePageIndicator;
 import java.lang.reflect.Field;
 
 import base.BaseActivity;
+import comm.MySharedPreference;
+import config.GLOBAL_STRING;
 import ui.Adapters.SplashScreenPagerAdapter;
 import ui.fragments.SplashFragment;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
@@ -28,6 +31,7 @@ public class SplashActivity extends BaseActivity implements SplashFragment.INavi
     ViewPager helpViewPager;
     CirclePageIndicator pageIndicator;
     SplashScreenPagerAdapter screenSlidePagerAdapter;
+    MySharedPreference mSharedpreferences;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,13 @@ public class SplashActivity extends BaseActivity implements SplashFragment.INavi
                 .build()
         );
         setContentView(R.layout.activity_splash);
+        mSharedpreferences=new MySharedPreference(this);
+        if(!mSharedpreferences.getString(GLOBAL_STRING.SPLASH, "").equals("")){
+
+            startActivity(new Intent(SplashActivity.this,DrawerMainActivity.class));
+            finish();
+        }
+
 
         helpViewPager=(ViewPager)findViewById(R.id.help_viewpager);
         pageIndicator = (CirclePageIndicator) findViewById(R.id.help_viewpager_indicator);
@@ -46,7 +57,7 @@ public class SplashActivity extends BaseActivity implements SplashFragment.INavi
         helpViewPager.setAdapter(screenSlidePagerAdapter);
         pageIndicator.setViewPager(helpViewPager);
 
-        pageIndicator.setStrokeWidth(5);
+        pageIndicator.setStrokeWidth(2);
 
         changePagerScroller();
 
@@ -78,6 +89,7 @@ public class SplashActivity extends BaseActivity implements SplashFragment.INavi
             helpViewPager.setCurrentItem(helpViewPager.getCurrentItem() - 1);
         }
         else if(nav.equals("DONE")){
+            mSharedpreferences.setString(GLOBAL_STRING.SPLASH, "DONE");
             startActivity(new Intent(this, DrawerMainActivity.class));
             finish();
         }

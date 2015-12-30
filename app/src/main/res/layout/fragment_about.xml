@@ -45,10 +45,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/RADIO_TEXTVIEW"
+                    android:layout_marginTop="27dp"
+                    android:text="Version 0.1"
                     android:layout_below="@+id/textView3"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="21dp"
-                    android:text="Version 0.1" />
+                    android:layout_centerHorizontal="true" />
 
                 <TextView
                     android:layout_width="wrap_content"
