@@ -15,6 +15,10 @@
 
     <string name="share_template">လူ့အခွင့်အရေးကြေငြာစာတမ်း</string>
 
+    <string name="next">ရှေ့သို့</string>
+    <string name="prev">နောက်သို့</string>
+    <string name="done">ရပြီ</string>
+
     <string-array name="drawer_menu_array">
         <item>လူ့အခွင့်အရေးကြေငြာစာတမ်း</item>
 

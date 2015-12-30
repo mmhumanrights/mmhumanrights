@@ -82,13 +82,13 @@ public class SplashActivity extends BaseActivity implements SplashFragment.INavi
 
     @Override
     public void onNavigationClickListener(String nav) {
-        if(nav.equals("NEXT")){
+        if(nav.equals(this.getResources().getString(R.string.next))){
             helpViewPager.setCurrentItem(helpViewPager.getCurrentItem() + 1);
         }
-        else if(nav.equals("BACK")){
+        else if(nav.equals(this.getResources().getString(R.string.prev))){
             helpViewPager.setCurrentItem(helpViewPager.getCurrentItem() - 1);
         }
-        else if(nav.equals("DONE")){
+        else if(nav.equals(this.getResources().getString(R.string.done))){
             mSharedpreferences.setString(GLOBAL_STRING.SPLASH, "DONE");
             startActivity(new Intent(this, DrawerMainActivity.class));
             finish();

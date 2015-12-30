@@ -11,10 +11,15 @@
     <color name="main_blue">#51b4ea</color>
     <color name="main_blue_dark">#2c47a9</color>
     <color name="main_green">#4CAF50</color>
+    <color name="main_purple">#9C27B0</color>
+    <color name="main_blue_grey">#607D8B</color>
+    <color name="main_android_green">#77c17a</color>
     <color name="main_teal">#00796B</color>
     <color name="main_white">#FFF</color>
+    <color name="main_cyan">#00fbff</color>
     <color name="main_dark_orange">#c7760b</color>
     <color name="main_yellow">#f9dc06</color>
+    <color name="main_black">#000</color>
     <color name="main_light_yellow">#fff8c2</color>
     <color name="main_orange_light">#ffffa01c</color>
     <color name="main_dark_teal">#003d5e</color>
