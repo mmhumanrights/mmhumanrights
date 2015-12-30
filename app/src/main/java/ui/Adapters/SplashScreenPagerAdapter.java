@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import ui.fragments.SplashFragment;
+
 /**
  * Created by winhtaikaung on 12/29/15.
  */
@@ -17,14 +19,17 @@ public class SplashScreenPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
+
+        Fragment fragment = new SplashFragment();
         Bundle bundle = new Bundle();
         bundle.putInt("pagerposition", position);
 
-        return  null;//Has to return Fragment
+        fragment.setArguments(bundle);
+        return  fragment;//Has to return Fragment
     }
 
     @Override
     public int getCount() {
-        return 0;
+        return 3;
     }
 }

@@ -1,1 +1,1 @@
-include ':app', ':libraryObserverableScrollView'
+include ':app', ':libraryObserverableScrollView', ':ViewPagerIndicator'
