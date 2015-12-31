@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.ToxicBakery.viewpager.transforms.ZoomInTransformer;
+import com.ToxicBakery.viewpager.transforms.ZoomOutSlideTransformer;
 import com.myanmarhumanrights.R;
 
 import java.util.ArrayList;
@@ -70,6 +72,7 @@ public class DefinitionPagerFragment extends BaseFragment {
         }
         mPagerAdapter=new DefinitionPagerAdapter(getActivity(),articles,getChildFragmentManager());
         mViewPager.setAdapter(mPagerAdapter);
+        mViewPager.setPageTransformer(true,new ZoomOutSlideTransformer());
 
         if(ARR_INDEX!=-1){
             if(ARTICLE_PART.equals("2")){

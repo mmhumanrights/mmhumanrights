@@ -21,7 +21,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/app_icon"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_alignParentTop="true"
@@ -35,7 +35,7 @@
                     style="@style/Titletext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/imageView"
+                    android:layout_below="@+id/app_icon"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="36dp"
                     android:text="Myanmar Human Rights" />
@@ -54,12 +54,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Opensource Licenses"
-                    android:id="@+id/textView4"
+                    style="@style/RADIO_TEXTVIEW"
+                    android:id="@+id/tv_licenses"
                     android:layout_marginTop="21dp"
                     android:layout_below="@+id/tv_version_name"
                     android:layout_centerHorizontal="true"
 
                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Icon Credits"
+                    style="@style/RADIO_TEXTVIEW"
+                    android:id="@+id/tv_iconcredits"
+                    android:layout_marginTop="21dp"
+                    android:layout_below="@+id/tv_licenses"
+                    android:layout_centerHorizontal="true"
+
+                    />
+
+
 
             </RelativeLayout>
 

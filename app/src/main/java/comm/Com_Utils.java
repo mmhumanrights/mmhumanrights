@@ -51,10 +51,18 @@ public class Com_Utils {
 
     public int getScreenWidth(Activity a) {
         Display display = a.getWindowManager().getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
-        int width = size.x;
-        return width;
+        if(android.os.Build.VERSION.SDK_INT <= 10) {
+            int width = display.getWidth();
+            return width;
+        }else {
+
+
+            Point size = new Point();
+            display.getSize(size);
+            int width = size.x;
+            return width;
+        }
+
     }
 
     public int getScreenHeight(Activity a) {

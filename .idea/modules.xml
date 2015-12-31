@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/ViewPagerIndicator/ViewPagerIndicator.iml" filepath="$PROJECT_DIR$/ViewPagerIndicator/ViewPagerIndicator.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/libraryObserverableScrollView/libraryObserverableScrollView.iml" filepath="$PROJECT_DIR$/libraryObserverableScrollView/libraryObserverableScrollView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libraryPagerTransforms/libraryPagerTransforms.iml" filepath="$PROJECT_DIR$/libraryPagerTransforms/libraryPagerTransforms.iml" />
     </modules>
   </component>
 </project>

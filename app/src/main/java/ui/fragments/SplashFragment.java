@@ -105,9 +105,8 @@ public class SplashFragment extends BaseFragment {
                 tv_right.setTextColor(getActivity().getResources().getColor(R.color.main_android_green));
                 tv_left.setTextColor(getActivity().getResources().getColor(R.color.main_android_green));
                 //description.setText("You can then start chatting. The rest is up to you… Be nice :)");
-                splash_textview.setText("မေးခွန်းတွေကြောင့်\n" +
-                        "သင်စိတ်ရှုပ်သွားတယ် \n" +
-                        "ဆိုတောင်းပန်ပါတယ်");
+                splash_textview.setText("ဒါတွေအားလုံးကို\n" +
+                        "မကြာခင်သိရမှာပါ");
                 splash_textview.setTextColor(getActivity().getResources().getColor(R.color.main_android_green));
                 help_fragment_imageview.setBackgroundColor(getActivity().getResources().getColor(R.color.main_black));
                 description_layout.setBackgroundColor(getActivity().getResources().getColor(R.color.main_black));
@@ -116,8 +115,8 @@ public class SplashFragment extends BaseFragment {
             case 5:
                 tv_left.setText(getActivity().getResources().getString(R.string.prev));
                 tv_right.setText(getActivity().getResources().getString(R.string.done));
-                tv_right.setTextColor(getActivity().getResources().getColor(R.color.main_blue_grey));
-                tv_left.setTextColor(getActivity().getResources().getColor(R.color.main_blue_grey));
+                tv_right.setTextColor(getActivity().getResources().getColor(R.color.main_light_yellow));
+                tv_left.setTextColor(getActivity().getResources().getColor(R.color.main_light_yellow));
                 //description.setText("You can then start chatting. The rest is up to you… Be nice :)");
                 help_text.setVisibility(View.VISIBLE);
                 help_text.setText("(ရပြီ) ကိုနှိပ်ပါ");
@@ -127,7 +126,7 @@ public class SplashFragment extends BaseFragment {
                         "လူ့အခွင့်အရေးနှင့်\n" +
                         "ပတ်သက်၍ အသိပညာ\n" +
                         "မျှဝေပါရစေ");
-                splash_textview.setTextColor(getActivity().getResources().getColor(R.color.main_blue_grey));
+                splash_textview.setTextColor(getActivity().getResources().getColor(R.color.main_light_yellow));
                 help_fragment_imageview.setBackgroundColor(getActivity().getResources().getColor(R.color.main_black));
                 description_layout.setBackgroundColor(getActivity().getResources().getColor(R.color.main_black));
 

@@ -1,6 +1,8 @@
 package ui.activities;
 
 import android.content.Intent;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -89,12 +91,18 @@ public class DefinitionDetailFragment extends Fragment implements ObservableScro
         headerimage_view = (ImageView) v.findViewById(R.id.header_imageView);
 
 
-        Glide.with(getActivity()).load(arr_img[Com_Utils.getRandomnum(arr_img.length, 0)]).centerCrop().into(headerimage_view);
+
 
 
         if (mToolbar != null) {
+
+
             ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
             ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+            final Drawable upArrow = getResources().getDrawable(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
+            upArrow.setColorFilter(getResources().getColor(android.R.color.white), PorterDuff.Mode.SRC_ATOP);
+            ((AppCompatActivity) getActivity()).getSupportActionBar().setHomeAsUpIndicator(upArrow);
 
         }
         List<String> title_list = new ArrayList(Arrays.asList(getActivity().getResources().getStringArray(R.array.arr_article_title)));
@@ -105,6 +113,13 @@ public class DefinitionDetailFragment extends Fragment implements ObservableScro
         if (ARTICLE_PART.equals("")) {
             tv_def_article.setText(title_list.get(ARR_INDEX));
             tv_def_content.setText(content_list.get(ARR_INDEX));
+        }
+
+        if(ARR_INDEX==18){
+
+            Glide.with(getActivity()).load(arr_img[1]).centerCrop().into(headerimage_view);
+        }else{
+            Glide.with(getActivity()).load(arr_img[Com_Utils.getRandomnum(arr_img.length, 0)]).centerCrop().into(headerimage_view);
         }
 
         //mCollapsingToolbarLayout.setTitle("Yangon");

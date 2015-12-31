@@ -98,7 +98,7 @@
 
     <style name="Definition_content" parent="android:Widget.TextView">
         <item name="android:textColor">@color/main_text_color</item>
-        <item name="android:textSize">25dp</item>
+        <item name="android:textSize">20dp</item>
 
     </style>
 
@@ -110,7 +110,7 @@
 
     <style name="RADIO_TEXTVIEW" parent="android:Widget.CompoundButton.RadioButton">
         <item name="android:textColor">@color/main_text_color</item>
-        <item name="android:textSize">15dp</item>
+        <item name="android:textSize">20dp</item>
         <item name="android:checked">false</item>
     </style>
 

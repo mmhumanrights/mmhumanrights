@@ -168,7 +168,7 @@ public class DrawerMainActivity extends AppCompatActivity {
                 fragmentManager.beginTransaction().replace(R.id.content_frame,new ArticlesTabFragment()).commit();
                 break;
             case 1:
-                toolbar.setTitle(DrawerMenuList[position]);
+                
                 if(!Com_Utils.isOnline(this)){
                     AlertDialog.Builder builder=new AlertDialog.Builder(this);
                     builder.setMessage(this.getResources().getString(R.string.internet_required));

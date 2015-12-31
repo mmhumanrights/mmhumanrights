@@ -10,9 +10,11 @@ import android.util.Log;
 import android.view.animation.Interpolator;
 import android.widget.Scroller;
 
+import com.crashlytics.android.Crashlytics;
 import com.myanmarhumanrights.R;
 import com.viewpagerindicator.CirclePageIndicator;
 
+import io.fabric.sdk.android.Fabric;
 import java.lang.reflect.Field;
 
 import base.BaseActivity;
@@ -36,6 +38,7 @@ public class SplashActivity extends BaseActivity implements SplashFragment.INavi
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
                 .setDefaultFontPath("fonts/Padauk.ttf")
                 .setFontAttrId(R.attr.fontPath)

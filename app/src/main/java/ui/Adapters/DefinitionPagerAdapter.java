@@ -24,7 +24,7 @@ public class DefinitionPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
 
-       return  DefinitionDetailFragment.newInstance(position,"");
+        return  DefinitionDetailFragment.newInstance(position,"");
     }
 
     @Override

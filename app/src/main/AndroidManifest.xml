@@ -39,6 +39,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ui.activities.DrawerMainActivity" />
         </activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="bdd5945a796b3203efe3a689478167ac6a20f8fd" />
     </application>
 
 </manifest>
